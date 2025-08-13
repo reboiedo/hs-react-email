@@ -15,14 +15,17 @@ A modern React Email system for Harbour.Space University featuring responsive te
 ## 🚀 Quick Start
 
 1. **Install dependencies:**
+
    ```bash
    npm install
    ```
 
 2. **Set up environment variables:**
+
    ```bash
    cp .env.example .env
    ```
+
    Configure your SendGrid API key and Cloudinary credentials.
 
 3. **Start development server:**
@@ -36,12 +39,14 @@ A modern React Email system for Harbour.Space University featuring responsive te
 ### How It Works
 
 #### Development Mode
+
 - **Location**: Assets served from `emails/static/`
 - **Access**: Direct file serving via `/static/filename.svg`
 - **Benefits**: Instant updates, no upload needed
 - **Usage**: Automatic when `NODE_ENV` is not set to `production`
 
 #### Production Mode
+
 - **Location**: Assets served from Cloudinary CDN
 - **Access**: Optimized URLs like `https://res.cloudinary.com/...`
 - **Benefits**: Global CDN, automatic optimization, caching
@@ -50,6 +55,7 @@ A modern React Email system for Harbour.Space University featuring responsive te
 ### Asset Upload Process
 
 1. **Add new assets locally:**
+
    ```bash
    # Place SVG and PNG files in emails/static/
    emails/static/Logo_Purple.svg
@@ -57,9 +63,11 @@ A modern React Email system for Harbour.Space University featuring responsive te
    ```
 
 2. **Upload to Cloudinary:**
+
    ```bash
    node scripts/upload-assets.js upload
    ```
+
    This uploads all mapped assets and creates `assets.json` manifest.
 
 3. **List uploaded assets:**
@@ -87,6 +95,7 @@ const icon = getIconUrl('facebook');
 ```
 
 **Email Client Support:**
+
 - ✅ Gmail Desktop: Full SVG support
 - ⚠️ Gmail Mobile: Partial (non-Google accounts only)
 - ✅ Outlook: Supported across versions
@@ -118,6 +127,7 @@ emails/
 ## 🎨 Design System
 
 ### Colors
+
 ```typescript
 // Primary accent (buttons, highlights)
 purple[700]: '#4B2696'
@@ -128,6 +138,7 @@ semantic.textSecondary: '#525252'
 ```
 
 ### Typography
+
 ```typescript
 fontSize: {
   xs: '12px',   // Legal text
@@ -150,12 +161,14 @@ fontSize: {
 import { render } from "@react-email/render";
 import EventConfirmationEmail from "./emails/events/confirmation";
 
-const html = render(EventConfirmationEmail({
-  firstName: "John",
-  eventTitle: "Tech Talk",
-  eventDate: "March 15, 2024",
-  location: "Barcelona Campus"
-}));
+const html = render(
+  EventConfirmationEmail({
+    firstName: "John",
+    eventTitle: "Tech Talk",
+    eventDate: "March 15, 2024",
+    location: "Barcelona Campus",
+  })
+);
 
 // Send via SendGrid
 await sendEmail({ to, subject, html });
@@ -164,11 +177,13 @@ await sendEmail({ to, subject, html });
 ## 🚀 Production Deployment
 
 1. **Upload assets to Cloudinary:**
+
    ```bash
    node scripts/upload-assets.js upload
    ```
 
 2. **Set production environment:**
+
    ```bash
    NODE_ENV=production
    ```
@@ -181,6 +196,7 @@ await sendEmail({ to, subject, html });
 ## 📧 Email Client Compatibility
 
 Tested and optimized for:
+
 - Gmail (Desktop & Mobile)
 - Apple Mail (Desktop & iOS)
 - Outlook (Web, Desktop & Mobile)
