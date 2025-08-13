@@ -29,6 +29,9 @@ Thumbs.db
 # React Email build artifacts
 .react-email/
 
+# Large binary files
+node_modules/@next/swc-*/*.node
+
 # Logs
 *.log
 logs/
