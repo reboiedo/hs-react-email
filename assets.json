@@ -1,0 +1,150 @@
+{
+  "lastUpdated": "2025-08-13T14:21:00.026Z",
+  "baseUrl": "https://res.cloudinary.com/ddlnwaghp",
+  "assets": {
+    "logos/harbour-space-logo": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094860/harbour-space-emails/logos/harbour-space-logo.svg",
+      "publicId": "harbour-space-emails/logos/harbour-space-logo",
+      "width": 213,
+      "height": 40,
+      "format": "svg",
+      "bytes": 9166,
+      "uploadedAt": "2025-08-13T14:21:01.540Z"
+    },
+    "logos/harbour-space-logo-white": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094861/harbour-space-emails/logos/harbour-space-logo-white.svg",
+      "publicId": "harbour-space-emails/logos/harbour-space-logo-white",
+      "width": 213,
+      "height": 40,
+      "format": "svg",
+      "bytes": 9164,
+      "uploadedAt": "2025-08-13T14:21:02.765Z"
+    },
+    "logos/harbour-space-logo-fallback": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094863/harbour-space-emails/logos/harbour-space-logo-fallback.png",
+      "publicId": "harbour-space-emails/logos/harbour-space-logo-fallback",
+      "width": 425,
+      "height": 80,
+      "format": "png",
+      "bytes": 3538,
+      "uploadedAt": "2025-08-13T14:21:03.382Z"
+    },
+    "logos/harbour-space-logo-white-fallback": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094863/harbour-space-emails/logos/harbour-space-logo-white-fallback.png",
+      "publicId": "harbour-space-emails/logos/harbour-space-logo-white-fallback",
+      "width": 637,
+      "height": 120,
+      "format": "png",
+      "bytes": 5338,
+      "uploadedAt": "2025-08-13T14:21:04.045Z"
+    },
+    "icons/facebook": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094864/harbour-space-emails/icons/facebook.svg",
+      "publicId": "harbour-space-emails/icons/facebook",
+      "width": 24,
+      "height": 24,
+      "format": "svg",
+      "bytes": 406,
+      "uploadedAt": "2025-08-13T14:21:04.618Z"
+    },
+    "icons/facebook-fallback": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094864/harbour-space-emails/icons/facebook-fallback.png",
+      "publicId": "harbour-space-emails/icons/facebook-fallback",
+      "width": 72,
+      "height": 72,
+      "format": "png",
+      "bytes": 312,
+      "uploadedAt": "2025-08-13T14:21:05.205Z"
+    },
+    "icons/instagram": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094865/harbour-space-emails/icons/instagram.svg",
+      "publicId": "harbour-space-emails/icons/instagram",
+      "width": 24,
+      "height": 24,
+      "format": "svg",
+      "bytes": 1506,
+      "uploadedAt": "2025-08-13T14:21:05.787Z"
+    },
+    "icons/instagram-fallback": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094865/harbour-space-emails/icons/instagram-fallback.png",
+      "publicId": "harbour-space-emails/icons/instagram-fallback",
+      "width": 72,
+      "height": 72,
+      "format": "png",
+      "bytes": 690,
+      "uploadedAt": "2025-08-13T14:21:06.371Z"
+    },
+    "icons/linkedin": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094866/harbour-space-emails/icons/linkedin.svg",
+      "publicId": "harbour-space-emails/icons/linkedin",
+      "width": 24,
+      "height": 24,
+      "format": "svg",
+      "bytes": 1004,
+      "uploadedAt": "2025-08-13T14:21:07.329Z"
+    },
+    "icons/linkedin-fallback": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094867/harbour-space-emails/icons/linkedin-fallback.png",
+      "publicId": "harbour-space-emails/icons/linkedin-fallback",
+      "width": 72,
+      "height": 72,
+      "format": "png",
+      "bytes": 409,
+      "uploadedAt": "2025-08-13T14:21:07.964Z"
+    },
+    "icons/tiktok": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094868/harbour-space-emails/icons/tiktok.svg",
+      "publicId": "harbour-space-emails/icons/tiktok",
+      "width": 24,
+      "height": 24,
+      "format": "svg",
+      "bytes": 558,
+      "uploadedAt": "2025-08-13T14:21:08.622Z"
+    },
+    "icons/tiktok-fallback": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094868/harbour-space-emails/icons/tiktok-fallback.png",
+      "publicId": "harbour-space-emails/icons/tiktok-fallback",
+      "width": 72,
+      "height": 72,
+      "format": "png",
+      "bytes": 475,
+      "uploadedAt": "2025-08-13T14:21:09.421Z"
+    },
+    "icons/youtube": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094869/harbour-space-emails/icons/youtube.svg",
+      "publicId": "harbour-space-emails/icons/youtube",
+      "width": 24,
+      "height": 24,
+      "format": "svg",
+      "bytes": 700,
+      "uploadedAt": "2025-08-13T14:21:10.142Z"
+    },
+    "icons/youtube-fallback": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094870/harbour-space-emails/icons/youtube-fallback.png",
+      "publicId": "harbour-space-emails/icons/youtube-fallback",
+      "width": 72,
+      "height": 72,
+      "format": "png",
+      "bytes": 463,
+      "uploadedAt": "2025-08-13T14:21:11.151Z"
+    },
+    "icons/map": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094871/harbour-space-emails/icons/map.svg",
+      "publicId": "harbour-space-emails/icons/map",
+      "width": 24,
+      "height": 24,
+      "format": "svg",
+      "bytes": 1239,
+      "uploadedAt": "2025-08-13T14:21:11.780Z"
+    },
+    "images/events/test-asset": {
+      "url": "https://res.cloudinary.com/ddlnwaghp/image/upload/v1755094872/harbour-space-emails/images/events/test-asset.png",
+      "publicId": "harbour-space-emails/images/events/test-asset",
+      "width": 1200,
+      "height": 675,
+      "format": "png",
+      "bytes": 374976,
+      "uploadedAt": "2025-08-13T14:21:14.598Z"
+    }
+  }
+}
