@@ -1,11 +1,7 @@
 import * as React from "react";
 import { Preview, Img, Text, Section } from "@react-email/components";
-import {
-  HSLayout,
-  HSButton,
-  EventData,
-} from "../_components";
-import { getImageUrl, getIconUrl, semantic, fontSize, fontWeight, lineHeight } from "../_utils";
+import { HSLayout, HSButton, EventData } from "../_components";
+import { getImageUrl, getIconUrl } from "../_utils";
 
 interface EventConfirmationProps {
   recipientName: string;
@@ -45,181 +41,60 @@ export const EventConfirmation: React.FC<EventConfirmationProps> = ({
       <Preview>{previewText}</Preview>
 
       {/* Hero Image */}
-      <Section style={{ marginBottom: '24px' }}>
+      <Section className="mb-6">
         <Img
           src={getImageUrl("images/event-test-asset", 600)}
           alt="Event illustration"
-          style={{
-            width: "100%",
-            minWidth: "280px",
-            maxWidth: "552px",
-            height: "auto",
-            display: "block",
-            borderRadius: "8px",
-          }}
+          className="w-full min-w-[280px] max-w-[552px] h-auto block rounded-lg mb-5"
         />
       </Section>
 
       {/* Spot Reserved Text */}
-      <Text
-        style={{
-          fontSize: fontSize['2xl'],
-          color: '#4B2696',
-          margin: '0',
-          marginBottom: '8px',
-          fontStyle: 'italic',
-        }}
-      >
+      <Text className="text-2xl text-purple-700 mb-2 italic">
         Spot Reserved!
       </Text>
 
       {/* Event Title */}
-      <Text
-        style={{
-          fontSize: fontSize['3xl'],
-          fontWeight: fontWeight.medium,
-          color: semantic.textPrimary,
-          margin: '0',
-          marginBottom: '24px',
-          lineHeight: lineHeight.tight,
-        }}
-      >
+      <Text className="text-3xl font-medium text-gray-900 m-0 mb-6 leading-tight">
         {event.title}
       </Text>
 
       {/* Event Details Card */}
-      <div 
-        style={{
-          backgroundColor: semantic.bgCard,
-          border: `1px solid ${semantic.borderDefault}`,
-          borderRadius: '8px',
-          padding: '16px',
-          marginBottom: '24px',
-          minWidth: '280px',
-          boxSizing: 'border-box',
-        }}
-      >
+      <div className="bg-gray-50 border-solid border-gray-200 border rounded-lg p-4 mb-6 min-w-[280px] box-border">
         {/* Date and Time Row */}
-        <div style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          marginBottom: '16px',
-          flexWrap: 'wrap',
-          gap: '12px'
-        }}>
-          <div 
-            style={{
-              minWidth: '48px',
-              width: '48px',
-              height: '48px',
-              border: `1px solid ${semantic.borderDefault}`,
-              borderRadius: '8px',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: semantic.bgPrimary,
-              flexShrink: 0,
-            }}
-          >
-            <Text
-              style={{
-                fontSize: fontSize.xs,
-                color: semantic.textTertiary,
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                margin: '0',
-                lineHeight: '1',
-              }}
-            >
+        <div className="flex items-center mb-4 flex-wrap gap-3">
+          <div className="min-w-12 w-12 h-12 border-solid border-gray-200 border rounded-lg flex flex-col items-center justify-center bg-white flex-shrink-0">
+            <Text className="text-xs text-gray-500 uppercase tracking-wide m-0 leading-none">
               JUL
             </Text>
-            <Text
-              style={{
-                fontSize: fontSize.lg,
-                fontWeight: fontWeight.bold,
-                color: semantic.textPrimary,
-                margin: '0',
-                lineHeight: '1',
-              }}
-            >
+            <Text className="text-lg font-bold text-gray-900 m-0 leading-none">
               18
             </Text>
           </div>
-          <div style={{ flex: '1', minWidth: '150px' }}>
-            <Text
-              style={{
-                fontSize: fontSize.base,
-                fontWeight: fontWeight.medium,
-                color: semantic.textPrimary,
-                margin: '0',
-                marginBottom: '2px',
-              }}
-            >
+          <div className="flex-1 min-w-[150px]">
+            <Text className="text-base font-medium text-gray-900 m-0 mb-0.5">
               {event.date}
             </Text>
-            <Text
-              style={{
-                fontSize: fontSize.sm,
-                color: semantic.textSecondary,
-                margin: '0',
-              }}
-            >
-              {event.time}
-            </Text>
+            <Text className="text-sm text-gray-600 m-0">{event.time}</Text>
           </div>
         </div>
 
         {/* Location Row */}
-        <div style={{ 
-          display: 'flex', 
-          alignItems: 'flex-start',
-          flexWrap: 'wrap',
-          gap: '12px'
-        }}>
-          <div 
-            style={{
-              minWidth: '48px',
-              width: '48px',
-              height: '48px',
-              border: `1px solid ${semantic.borderDefault}`,
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: semantic.bgPrimary,
-              flexShrink: 0,
-            }}
-          >
+        <div className="flex items-start flex-wrap gap-3">
+          <div className="min-w-12 w-12 h-12 border-solid border-gray-200 border rounded-lg flex items-center justify-center bg-white flex-shrink-0">
             <Img
               src={getIconUrl("map").svg}
               width="20"
               height="20"
               alt="Location"
-              style={{ display: 'block' }}
+              className="block"
             />
           </div>
-          <div style={{ flex: '1', minWidth: '150px' }}>
-            <Text
-              style={{
-                fontSize: fontSize.base,
-                fontWeight: fontWeight.medium,
-                color: semantic.textPrimary,
-                margin: '0',
-                marginBottom: '2px',
-              }}
-            >
+          <div className="flex-1 min-w-[150px]">
+            <Text className="text-base font-medium text-gray-900 m-0 mb-0.5">
               {event.location.venue}
             </Text>
-            <a
-              href="#"
-              style={{
-                fontSize: fontSize.sm,
-                color: semantic.textTertiary,
-                textDecoration: 'underline',
-                margin: '0',
-              }}
-            >
+            <a href="#" className="text-sm text-gray-500 underline m-0">
               {event.location.address}
             </a>
           </div>
@@ -227,14 +102,7 @@ export const EventConfirmation: React.FC<EventConfirmationProps> = ({
       </div>
 
       {/* Action Buttons */}
-      <div
-        style={{
-          display: 'flex',
-          gap: '12px',
-          marginBottom: '32px',
-          flexWrap: 'wrap',
-        }}
-      >
+      <div className="flex gap-3 mb-8 flex-wrap">
         <HSButton href="#" variant="primary" size="md">
           Stream Link
         </HSButton>

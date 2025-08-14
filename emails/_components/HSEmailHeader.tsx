@@ -1,7 +1,6 @@
 import * as React from "react";
 import { Section, Img, Text } from "@react-email/components";
 import { getLogoUrl } from "../_utils";
-import { fontSize, semantic } from "../_utils";
 
 interface HSEmailHeaderProps {
   className?: string;
@@ -14,38 +13,24 @@ export const HSEmailHeader: React.FC<HSEmailHeaderProps> = ({
 }) => {
   return (
     <Section className={className}>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
-          width: '100%',
-        }}
-      >
-        {/* Left side - Logo only */}
-        <div>
-          <Img
-            src={getLogoUrl('main').svg}
-            height="32"
-            alt="Harbour.Space University"
-            style={{ width: 'auto' }}
-          />
+        <div className="flex justify-between items-start w-full">
+          {/* Left side - Logo only */}
+          <div>
+            <Img
+              src={getLogoUrl('main').svg}
+              height="32"
+              alt="Harbour.Space University"
+              className="w-auto"
+            />
+          </div>
+          
+          {/* Right side - Header type */}
+          {headerType && (
+            <Text className="text-base text-purple-700 m-0 font-normal">
+              {headerType}
+            </Text>
+          )}
         </div>
-        
-        {/* Right side - Header type */}
-        {headerType && (
-          <Text
-            style={{
-              fontSize: fontSize.base,
-              color: semantic.primaryMedium,
-              margin: '0',
-              fontWeight: '400',
-            }}
-          >
-            {headerType}
-          </Text>
-        )}
-      </div>
-    </Section>
+      </Section>
   );
 };

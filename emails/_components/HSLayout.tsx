@@ -3,7 +3,7 @@ import { Html, Head, Body, Tailwind, Container } from "@react-email/components";
 import { HSEmailHeader } from "./HSEmailHeader";
 import { HSEmailFooter } from "./HSEmailFooter";
 import { colors } from "../_utils";
-import tailwindConfig from "../../tailwind.config";
+import { emailTailwindConfig } from "../_utils/tailwind-config";
 
 interface HSLayoutProps {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ export const HSLayout: React.FC<HSLayoutProps> = ({
   headerType
 }) => {
   return (
-    <Tailwind config={tailwindConfig}>
+    <Tailwind config={emailTailwindConfig}>
       <Html lang="en">
         <Head>
           <title>{title}</title>

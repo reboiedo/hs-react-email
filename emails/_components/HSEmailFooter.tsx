@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Section, Text, Link, Img } from "@react-email/components";
-import { getLogoUrl, getIconUrl, fontSize, colors, semantic } from "../_utils";
+import { getLogoUrl, getIconUrl } from "../_utils";
 
 interface HSEmailFooterProps {
   includeUnsubscribe?: boolean;
@@ -14,48 +14,23 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
   return (
     <>
       {/* Top Navigation Bar - Purple 800 */}
-      <Section
-        className={className}
-        style={{
-          backgroundColor: colors.purple[800],
-          padding: "32px 40px",
-          marginTop: "0",
-        }}
-      >
-        <div style={{ textAlign: "center" }}>
+      <Section className={`bg-purple-800 py-8 px-10 mt-0 ${className}`}>
+        <div className="text-center">
           <a
             href="https://harbour.space/admissions"
-            style={{
-              color: colors.white,
-              fontSize: fontSize.sm,
-              fontWeight: "400",
-              textDecoration: "none",
-              margin: "0 20px",
-            }}
+            className="text-white text-sm font-normal no-underline mx-5"
           >
             Admissions
           </a>
           <a
             href="https://harbour.space/admissions/scholarships"
-            style={{
-              color: colors.white,
-              fontSize: fontSize.sm,
-              fontWeight: "400",
-              textDecoration: "none",
-              margin: "0 20px",
-            }}
+            className="text-white text-sm font-normal no-underline mx-5"
           >
             Scholarships
           </a>
           <a
             href="https://harbour.space/apply"
-            style={{
-              color: colors.white,
-              fontSize: fontSize.sm,
-              fontWeight: "400",
-              textDecoration: "none",
-              margin: "0 20px",
-            }}
+            className="text-white text-sm font-normal no-underline mx-5"
           >
             Apply
           </a>
@@ -63,50 +38,22 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
       </Section>
 
       {/* Main Footer Section - Purple 700 */}
-      <Section
-        style={{
-          backgroundColor: colors.purple[700],
-          padding: "64px 40px",
-          marginTop: "0",
-        }}
-      >
+      <Section className="bg-purple-700 py-16 px-10 mt-0">
         <div className="text-center">
           {/* White Logo */}
-          <div style={{ marginBottom: "48px" }}>
+          <div className="mb-12">
             <Img
               src={getLogoUrl("white").svg}
               height="40"
               alt="Harbour.Space University"
-              className="mx-auto"
-              style={{ width: "auto" }}
+              className="mx-auto w-auto"
             />
           </div>
 
           {/* Social Media Icons */}
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "24px",
-              marginBottom: "48px",
-            }}
-          >
-            <Link
-              href="https://instagram.com/harbour.space"
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                style={{
-                  backgroundColor: colors.purple[800],
-                  borderRadius: "50%",
-                  padding: "8px",
-                  width: "32px",
-                  height: "32px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+          <div className="flex justify-center gap-6 mb-12">
+            <Link href="https://instagram.com/harbour.space" className="no-underline">
+              <div className="bg-purple-800 rounded-full p-2 w-8 h-8 flex items-center justify-center">
                 <Img
                   src={getIconUrl("instagram").svg}
                   width="24"
@@ -115,22 +62,8 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
                 />
               </div>
             </Link>
-            <Link
-              href="https://linkedin.com/school/harbour-space-university"
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                style={{
-                  backgroundColor: colors.purple[800],
-                  borderRadius: "50%",
-                  padding: "8px",
-                  width: "32px",
-                  height: "32px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+            <Link href="https://linkedin.com/school/harbour-space-university" className="no-underline">
+              <div className="bg-purple-800 rounded-full p-2 w-8 h-8 flex items-center justify-center">
                 <Img
                   src={getIconUrl("linkedin").svg}
                   width="24"
@@ -139,22 +72,8 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
                 />
               </div>
             </Link>
-            <Link
-              href="https://www.youtube.com/@HarbourSpaceUniversity"
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                style={{
-                  backgroundColor: colors.purple[800],
-                  borderRadius: "50%",
-                  padding: "8px",
-                  width: "32px",
-                  height: "32px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+            <Link href="https://www.youtube.com/@HarbourSpaceUniversity" className="no-underline">
+              <div className="bg-purple-800 rounded-full p-2 w-8 h-8 flex items-center justify-center">
                 <Img
                   src={getIconUrl("youtube").svg}
                   width="24"
@@ -163,22 +82,8 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
                 />
               </div>
             </Link>
-            <Link
-              href="https://www.tiktok.com/@harbour.space"
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                style={{
-                  backgroundColor: colors.purple[800],
-                  borderRadius: "50%",
-                  padding: "8px",
-                  width: "32px",
-                  height: "32px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+            <Link href="https://www.tiktok.com/@harbour.space" className="no-underline">
+              <div className="bg-purple-800 rounded-full p-2 w-8 h-8 flex items-center justify-center">
                 <Img
                   src={getIconUrl("tiktok").svg}
                   width="24"
@@ -187,22 +92,8 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
                 />
               </div>
             </Link>
-            <Link
-              href="https://facebook.com/harbour.space"
-              style={{ textDecoration: "none" }}
-            >
-              <div
-                style={{
-                  backgroundColor: colors.purple[800],
-                  borderRadius: "50%",
-                  padding: "8px",
-                  width: "32px",
-                  height: "32px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+            <Link href="https://facebook.com/harbour.space" className="no-underline">
+              <div className="bg-purple-800 rounded-full p-2 w-8 h-8 flex items-center justify-center">
                 <Img
                   src={getIconUrl("facebook").svg}
                   width="24"
@@ -214,28 +105,14 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
           </div>
 
           {/* Address */}
-          <Text
-            style={{
-              color: colors.white,
-              fontSize: fontSize.base,
-              fontWeight: "400",
-              margin: "0 0 32px 0",
-            }}
-          >
+          <Text className="text-white text-base font-normal m-0 mb-8">
             Harbour.Space, Carrer de Rosa Sensat, 9, 08005 Barcelona, Catalunya,
             Spain
           </Text>
 
           {/* Unsubscribe Link */}
           {includeUnsubscribe && (
-            <Link
-              href="#unsubscribe"
-              style={{
-                color: colors.white,
-                textDecoration: "underline",
-                fontSize: fontSize.base,
-              }}
-            >
+            <Link href="#unsubscribe" className="text-white underline text-base">
               Unsubscribe
             </Link>
           )}
@@ -243,25 +120,13 @@ export const HSEmailFooter: React.FC<HSEmailFooterProps> = ({
       </Section>
 
       {/* Legal Links - Outside Purple Card */}
-      <Section
-        className="text-center"
-        style={{ padding: "24px 20px", backgroundColor: colors.white }}
-      >
-        <Text
-          className="text-xs text-hs-neutral-500 m-0"
-          style={{ fontSize: fontSize.xs, color: semantic.textTertiary }}
-        >
-          <Link
-            href="https://harbour.space/privacy"
-            style={{ color: semantic.textTertiary, textDecoration: "none" }}
-          >
+      <Section className="text-center py-6 px-5 bg-white">
+        <Text className="text-xs text-gray-500 m-0">
+          <Link href="https://harbour.space/privacy" className="text-gray-500 no-underline">
             Privacy Policy
           </Link>
           {" • "}
-          <Link
-            href="https://harbour.space/terms"
-            style={{ color: semantic.textTertiary, textDecoration: "none" }}
-          >
+          <Link href="https://harbour.space/terms" className="text-gray-500 no-underline">
             Terms of Service
           </Link>
           <br />© {new Date().getFullYear()} Harbour.Space University. All
